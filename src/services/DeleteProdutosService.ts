@@ -6,7 +6,7 @@ export class DeleteProdutosService {
         const repo = getRepository(Produtos);
 
         if(!(await repo.findOne(id))) {
-            return new Error("Category does not exists");
+            return new Error("Produto nao existe");
         }
 
         await repo.delete(id);

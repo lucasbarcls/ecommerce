@@ -25,6 +25,10 @@ export class CreateUsuarios1699999316637 implements MigrationInterface {
                         name: 'description',
                         type: 'varchar',
                     },
+                    {
+                        name: 'imagepath',
+                        type: 'varchar',
+                    },
                 ],
             })
         );

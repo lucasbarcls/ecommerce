@@ -5,6 +5,7 @@ type ProdutosRequest = {
     name: string;
     price: number;
     description: string;
+    imagepath: string;
 }
 
 
@@ -12,7 +13,8 @@ export class CreateProdutosService {
     async execute({
         name,
         price,
-        description
+        description,
+        imagepath
     }:ProdutosRequest ): Promise<Produtos | Error> {
         const repo = getRepository(Produtos);
 
@@ -23,7 +25,8 @@ export class CreateProdutosService {
         const produtos = repo.create({
             name,
             price,
-            description
+            description,
+            imagepath
         })
 
         await repo.save(produtos);

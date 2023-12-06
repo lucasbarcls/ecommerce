@@ -15,7 +15,10 @@ export class Produtos {
     @Column()
     description: string;
 
-    construtor() {
+    @Column()
+    imagepath: string;
+
+    constructor() {
         const id = uuid();
         if(!this.id) {
             this.id = id;
